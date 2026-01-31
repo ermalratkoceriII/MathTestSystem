@@ -1,5 +1,4 @@
-﻿using MathTest.Domain.Entities;
-using MathTest.WinFormsClient.Models;
+﻿using MathTest.WinFormsClient.Models;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
@@ -222,7 +221,7 @@ public partial class Form1 : Form
             
             if (string.IsNullOrWhiteSpace(key))
             {
-                MessageBox.Show("Key is required.", "Access denied",
+                MessageBox.Show("Password is required.", "Access denied",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
