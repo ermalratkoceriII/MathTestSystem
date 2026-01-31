@@ -22,7 +22,7 @@ A .NET-based system for automatically checking student arithmetic exams provided
 ## Tech Stack
 - .NET 8 (LTS)
 - ASP.NET Core Web API
-- WPF (UI placeholder)
+- WinForms (UI placeholder)
 - LINQ to XML
 - Swagger / OpenAPI
 
@@ -33,9 +33,11 @@ A .NET-based system for automatically checking student arithmetic exams provided
 - Authentication is out of scope
 
 ## How to Run
-1. Run `StudentMath.Api`
-2. Open `/swagger`
-3. Upload XML file via `/api/Exams/upload`
+1. Run `MathTest.Api` and `MathTest.WinFormsClient`
+2. Open `/swagger` or the WinForm window that pops up
+3. Open MathTest.Sandbox folder
+4. Sample.xml or MassiveSample file can be used to test via WinForms UI
+5. Upload XML file via `/api/Exams/upload`
 
 ## Future Improvements
 - Persistence layer (DB)

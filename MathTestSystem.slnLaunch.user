@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "MathTest.Api\\MathTest.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MathTest.WinFormsClient\\MathTest.WinFormsClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
