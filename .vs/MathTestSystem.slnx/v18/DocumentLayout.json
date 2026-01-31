@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B00B6376-AAF9-48C1-BCC0-7A55ECECB8BD}|MathTest.Engine\\MathTest.Engine.csproj|c:\\users\\ermal\\source\\repos\\mathtestsystem\\mathtest.engine\\mathtest.engine.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B00B6376-AAF9-48C1-BCC0-7A55ECECB8BD}|MathTest.Engine\\MathTest.Engine.csproj|solutionrelative:mathtest.engine\\mathtest.engine.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00B6376-AAF9-48C1-BCC0-7A55ECECB8BD}|MathTest.Engine\\MathTest.Engine.csproj|c:\\users\\ermal\\source\\repos\\mathtestsystem\\mathtest.engine\\services\\evaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00B6376-AAF9-48C1-BCC0-7A55ECECB8BD}|MathTest.Engine\\MathTest.Engine.csproj|solutionrelative:mathtest.engine\\services\\evaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B00B6376-AAF9-48C1-BCC0-7A55ECECB8BD}|MathTest.Engine\\MathTest.Engine.csproj|c:\\users\\ermal\\source\\repos\\mathtestsystem\\mathtest.engine\\interfaces\\ievaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B00B6376-AAF9-48C1-BCC0-7A55ECECB8BD}|MathTest.Engine\\MathTest.Engine.csproj|solutionrelative:mathtest.engine\\interfaces\\ievaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Evaluator.cs",
+              "DocumentMoniker": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\MathTest.Engine\\Services\\Evaluator.cs",
+              "RelativeDocumentMoniker": "MathTest.Engine\\Services\\Evaluator.cs",
+              "ToolTip": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\MathTest.Engine\\Services\\Evaluator.cs",
+              "RelativeToolTip": "MathTest.Engine\\Services\\Evaluator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T09:00:22.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEvaluator.cs",
+              "DocumentMoniker": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\MathTest.Engine\\Interfaces\\IEvaluator.cs",
+              "RelativeDocumentMoniker": "MathTest.Engine\\Interfaces\\IEvaluator.cs",
+              "ToolTip": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\MathTest.Engine\\Interfaces\\IEvaluator.cs",
+              "RelativeToolTip": "MathTest.Engine\\Interfaces\\IEvaluator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T08:59:37.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MathTest.Engine",
+              "DocumentMoniker": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\MathTest.Engine\\MathTest.Engine.csproj",
+              "RelativeDocumentMoniker": "MathTest.Engine\\MathTest.Engine.csproj",
+              "ToolTip": "C:\\Users\\ermal\\source\\repos\\MathTestSystem\\MathTest.Engine\\MathTest.Engine.csproj",
+              "RelativeToolTip": "MathTest.Engine\\MathTest.Engine.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-31T08:58:36.279Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
