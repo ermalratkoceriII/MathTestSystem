@@ -84,7 +84,7 @@
             gridProblems.Location = new Point(218, 72);
             gridProblems.Name = "gridProblems";
             gridProblems.ReadOnly = true;
-            gridProblems.Size = new Size(684, 335);
+            gridProblems.Size = new Size(584, 335);
             gridProblems.TabIndex = 4;
             // 
             // lblSummary
@@ -102,7 +102,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(914, 455);
+            ClientSize = new Size(810, 455);
             Controls.Add(lblSummary);
             Controls.Add(gridProblems);
             Controls.Add(cmbExams);

@@ -11,8 +11,4 @@
     <ProjectReference Include="..\MathTest.Domain\MathTest.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
