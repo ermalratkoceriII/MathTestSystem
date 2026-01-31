@@ -33,14 +33,12 @@ A .NET-based system for automatically checking student arithmetic exams provided
 - Authentication is out of scope
 
 ## How to Run
-1. Run `MathTest.Api` and `MathTest.WinFormsClient`
+# NOTE: The teacher must insert the data first for the students to be able to see them
+1. Startup config must be set to run these projects: `MathTest.Api` and `MathTest.WinFormsClient`. Afterwards run the project.
 2. Open `/swagger` or the WinForm window that pops up
-3. Open MathTest.Sandbox folder
-4. Sample.xml or MassiveSample file can be used to test via WinForms UI
-5. Upload XML file via `/api/Exams/upload`
+4. Select the teachers tab and insert the password (its in the appsettings.json for dev environment)
+5. Click the Upload Exams button
+6. Open MathTest.Sandbox folder
+7. Sample.xml or MassiveSample file can be used to test via WinForms UI
+8. Exam results will show on the individual student tab and also teachers tab as bulk.
 
-## Future Improvements
-- Persistence layer (DB)
-- Authentication
-- Student analytics UI
-- Safer math expression parser

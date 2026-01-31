@@ -2,22 +2,35 @@
 using MathTest.WinFormsClient.Models;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace MathTest.WinFormsClient;
 
 public partial class Form1 : Form
 {
-    // Change port if needed (use the one your API runs on)
+    // Demo purpose port
     private const string ApiBaseUrl = "http://localhost:35660";
 
     private readonly HttpClient _httpClient = new();
     private TeacherDto? _lastTeacher;
 
+    private readonly string _teacherAccessKey;
+    private bool _isTeacherUnlocked = false;
+
     public Form1()
     {
         InitializeComponent();
 
-        // basic grid config
+        var config = new ConfigurationBuilder()
+                    .SetBasePath(AppContext.BaseDirectory)
+                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                    .Build();
+
+        _teacherAccessKey = config["TeacherAccess:Key"]
+            ?? throw new InvalidOperationException("Teacher access key not found in appsettings.json");
+
+        tabMain.Selecting += TabMain_Selecting;
+        tabMain.SelectedTab = tabStudent;
         gridProblems.AutoGenerateColumns = true;
         gridProblems.ReadOnly = true;
         gridProblems.AllowUserToAddRows = false;
@@ -50,7 +63,6 @@ public partial class Form1 : Form
             var fileContent = new ByteArrayContent(bytes);
             fileContent.Headers.ContentType = new MediaTypeHeaderValue("text/xml");
 
-            // IMPORTANT: this "File" name must match UploadExamRequest.File
             form.Add(fileContent, "File", Path.GetFileName(dialog.FileName));
 
             var response = await _httpClient.PostAsync($"{ApiBaseUrl}/api/Exams/upload", form);
@@ -80,6 +92,7 @@ public partial class Form1 : Form
         }
     }
 
+    #region TeacherView
     private void BindTeacher(TeacherDto teacher)
     {
         lstStudents.DataSource = null;
@@ -101,7 +114,6 @@ public partial class Form1 : Form
         cmbExams.DisplayMember = "Id";
         cmbExams.DataSource = student.Exams;
 
-        // auto-select first exam
         if (student.Exams.Count > 0)
             cmbExams.SelectedIndex = 0;
 
@@ -133,13 +145,13 @@ public partial class Form1 : Form
         var total = exam.Problems.Count;
         var correct = exam.Problems.Count(p => p.IsCorrect);
 
-        var percentage = total == 0
-            ? 0
-            : (double)correct / total * 100;
+        var percentage = total == 0 ? 0 : (double)correct / total * 100;
 
         lblSummary.Text = $"Student: {student.Id} | Exam: {exam.Id} | Score: {correct}/{total} | ({percentage:0}%)";
     }
+    #endregion
 
+    #region StudentView
     private void BindStudentView(TeacherDto teacher)
     {
         cmbStudentId.DataSource = null;
@@ -197,4 +209,95 @@ public partial class Form1 : Form
         lblStudentSummary.Text =
             $"Student: {student.Id} | Exam: {exam.Id} | Score: {correct}/{total} ({percentage:0}%)";
     }
+    #endregion
+
+    #region TabSwitchAuth
+    private void TabMain_Selecting(object? sender, TabControlCancelEventArgs e)
+    {
+        if (e.TabPage == tabTeacher && !_isTeacherUnlocked)
+        {
+            e.Cancel = true;
+
+            var key = PromptForKey();
+            if (key == null)
+                return;
+
+            if (key == _teacherAccessKey)
+            {
+                _isTeacherUnlocked = true;
+                tabMain.SelectedTab = tabTeacher;
+            }
+            else
+            {
+                MessageBox.Show("Invalid key.", "Access denied",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                tabMain.SelectedTab = tabStudent;
+            }
+        }
+    }
+
+    private string? PromptForKey()
+    {
+        using var prompt = new Form
+        {
+            Width = 360,
+            Height = 160,
+            FormBorderStyle = FormBorderStyle.FixedDialog,
+            Text = "Teacher Access",
+            StartPosition = FormStartPosition.CenterParent,
+            MaximizeBox = false,
+            MinimizeBox = false
+        };
+
+        var textLabel = new Label
+        {
+            Left = 10,
+            Top = 15,
+            Width = 320,
+            Text = "Enter password to access teacher view:"
+        };
+
+        var textBox = new TextBox
+        {
+            Left = 10,
+            Top = 45,
+            Width = 320,
+            UseSystemPasswordChar = true
+        };
+
+        var okButton = new Button
+        {
+            Text = "OK",
+            Left = 170,
+            Width = 75,
+            Top = 80,
+            DialogResult = DialogResult.OK
+        };
+
+        var cancelButton = new Button
+        {
+            Text = "Cancel",
+            Left = 255,
+            Width = 75,
+            Top = 80,
+            DialogResult = DialogResult.Cancel
+        };
+
+        prompt.Controls.Add(textLabel);
+        prompt.Controls.Add(textBox);
+        prompt.Controls.Add(okButton);
+        prompt.Controls.Add(cancelButton);
+
+        prompt.AcceptButton = okButton;
+        prompt.CancelButton = cancelButton;
+
+        var result = prompt.ShowDialog(this);
+
+        if (result != DialogResult.OK)
+            return null;
+
+        return textBox.Text;
+    }
+    #endregion
 }

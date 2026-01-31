@@ -57,7 +57,7 @@
             btnUploadXml.Name = "btnUploadXml";
             btnUploadXml.Size = new Size(171, 25);
             btnUploadXml.TabIndex = 0;
-            btnUploadXml.Text = "Upload Xml File";
+            btnUploadXml.Text = "Upload Exams";
             btnUploadXml.UseVisualStyleBackColor = true;
             // 
             // lblStatus
