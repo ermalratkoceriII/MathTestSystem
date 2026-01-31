@@ -1,6 +1,5 @@
 ﻿using MathTest.Api.Models;
 using MathTest.Application.Interfaces;
-using MathTest.Domain.Entities;
 using MathTest.Infrastructure.Xml;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,6 +37,6 @@ public class ExamsController : ControllerBase
             }
         }
 
-        return Ok(teacher); // or Ok(response DTO) if you did that earlier
+        return Ok(teacher);
     }
 }

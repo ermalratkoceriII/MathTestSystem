@@ -58,7 +58,6 @@ public class XmlExamParser : IXmlExamParser
 
     private static MathProblem ParseProblem(string problemText)
     {
-        // Example: "2+3/6-4 = 74"
         var parts = problemText.Split('=');
 
         if (parts.Length != 2)

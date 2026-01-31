@@ -191,5 +191,195 @@
 			</Exam>
 		</Student>
 
+		<Student ID="10006">
+			<Exam Id="1">
+				<Problem id="1">5+8 = 13</Problem>
+				<Problem id="2">14-9 = 6</Problem>
+				<Problem id="3">6*3 = 18</Problem>
+				<Problem id="4">24/6 = 4</Problem>
+				<Problem id="5">9+7-5 = 12</Problem>
+			</Exam>
+			<Exam Id="2">
+				<Problem id="1">11+2 = 14</Problem>
+				<Problem id="2">18-4 = 14</Problem>
+				<Problem id="3">7*4 = 28</Problem>
+				<Problem id="4">30/5 = 7</Problem>
+				<Problem id="5">16-3+2 = 15</Problem>
+			</Exam>
+			<Exam Id="3">
+				<Problem id="1">20-6 = 14</Problem>
+				<Problem id="2">3*9 = 27</Problem>
+				<Problem id="3">36/9 = 4</Problem>
+				<Problem id="4">8+5 = 12</Problem>
+				<Problem id="5">10+6/3 = 12</Problem>
+			</Exam>
+			<Exam Id="4">
+				<Problem id="1">13-7 = 6</Problem>
+				<Problem id="2">4*8 = 33</Problem>
+				<Problem id="3">28/7 = 4</Problem>
+				<Problem id="4">6+9-1 = 14</Problem>
+				<Problem id="5">5*2+7 = 17</Problem>
+			</Exam>
+			<Exam Id="5">
+				<Problem id="1">9+9 = 18</Problem>
+				<Problem id="2">22-11 = 11</Problem>
+				<Problem id="3">8*2 = 15</Problem>
+				<Problem id="4">27/3 = 9</Problem>
+				<Problem id="5">12-4+6 = 14</Problem>
+			</Exam>
+		</Student>
+
+		<Student ID="10007">
+			<Exam Id="1">
+				<Problem id="1">4+6 = 10</Problem>
+				<Problem id="2">16-7 = 9</Problem>
+				<Problem id="3">5*5 = 25</Problem>
+				<Problem id="4">18/3 = 6</Problem>
+				<Problem id="5">14-2-3 = 10</Problem>
+			</Exam>
+			<Exam Id="2">
+				<Problem id="1">7+9 = 16</Problem>
+				<Problem id="2">12-5 = 8</Problem>
+				<Problem id="3">9*2 = 18</Problem>
+				<Problem id="4">40/8 = 5</Problem>
+				<Problem id="5">6+12/4 = 9</Problem>
+			</Exam>
+			<Exam Id="3">
+				<Problem id="1">19-3 = 16</Problem>
+				<Problem id="2">3*7 = 21</Problem>
+				<Problem id="3">21/7 = 3</Problem>
+				<Problem id="4">8+8 = 17</Problem>
+				<Problem id="5">10-1+5 = 14</Problem>
+			</Exam>
+			<Exam Id="4">
+				<Problem id="1">2+13 = 15</Problem>
+				<Problem id="2">25-10 = 15</Problem>
+				<Problem id="3">4*6 = 24</Problem>
+				<Problem id="4">32/4 = 8</Problem>
+				<Problem id="5">9+5-8 = 6</Problem>
+			</Exam>
+			<Exam Id="5">
+				<Problem id="1">17-9 = 8</Problem>
+				<Problem id="2">6*4 = 24</Problem>
+				<Problem id="3">45/9 = 5</Problem>
+				<Problem id="4">11+3 = 14</Problem>
+				<Problem id="5">20-7+1 = 13</Problem>
+			</Exam>
+		</Student>
+
+		<Student ID="10008">
+			<Exam Id="1">
+				<Problem id="1">8+3 = 11</Problem>
+				<Problem id="2">10-2 = 9</Problem>
+				<Problem id="3">7*3 = 21</Problem>
+				<Problem id="4">16/2 = 8</Problem>
+				<Problem id="5">9+4-6 = 7</Problem>
+			</Exam>
+			<Exam Id="2">
+				<Problem id="1">12+7 = 19</Problem>
+				<Problem id="2">30-14 = 16</Problem>
+				<Problem id="3">6*6 = 36</Problem>
+				<Problem id="4">27/9 = 4</Problem>
+				<Problem id="5">18-5+3 = 16</Problem>
+			</Exam>
+			<Exam Id="3">
+				<Problem id="1">5+15 = 20</Problem>
+				<Problem id="2">9*4 = 36</Problem>
+				<Problem id="3">24/8 = 3</Problem>
+				<Problem id="4">22-9 = 13</Problem>
+				<Problem id="5">6+8/2 = 10</Problem>
+			</Exam>
+			<Exam Id="4">
+				<Problem id="1">14-6 = 8</Problem>
+				<Problem id="2">3*8 = 23</Problem>
+				<Problem id="3">35/5 = 7</Problem>
+				<Problem id="4">7+7-2 = 12</Problem>
+				<Problem id="5">10+9-5 = 14</Problem>
+			</Exam>
+			<Exam Id="5">
+				<Problem id="1">9+6 = 15</Problem>
+				<Problem id="2">18/6 = 3</Problem>
+				<Problem id="3">11-4 = 7</Problem>
+				<Problem id="4">5*4 = 20</Problem>
+				<Problem id="5">16-8-1 = 7</Problem>
+			</Exam>
+		</Student>
+
+		<Student ID="10009">
+			<Exam Id="1">
+				<Problem id="1">6+7 = 13</Problem>
+				<Problem id="2">21-9 = 12</Problem>
+				<Problem id="3">4*9 = 36</Problem>
+				<Problem id="4">28/4 = 7</Problem>
+				<Problem id="5">10+3-8 = 6</Problem>
+			</Exam>
+			<Exam Id="2">
+				<Problem id="1">15+1 = 16</Problem>
+				<Problem id="2">8*3 = 24</Problem>
+				<Problem id="3">42/7 = 6</Problem>
+				<Problem id="4">19-5 = 13</Problem>
+				<Problem id="5">12+6/3 = 15</Problem>
+			</Exam>
+			<Exam Id="3">
+				<Problem id="1">9+10 = 19</Problem>
+				<Problem id="2">27-12 = 15</Problem>
+				<Problem id="3">5*7 = 36</Problem>
+				<Problem id="4">24/6 = 4</Problem>
+				<Problem id="5">14-4+2 = 12</Problem>
+			</Exam>
+			<Exam Id="4">
+				<Problem id="1">13+2 = 15</Problem>
+				<Problem id="2">16-8 = 8</Problem>
+				<Problem id="3">6*4 = 24</Problem>
+				<Problem id="4">18/9 = 2</Problem>
+				<Problem id="5">7+11-6 = 12</Problem>
+			</Exam>
+			<Exam Id="5">
+				<Problem id="1">25-7 = 18</Problem>
+				<Problem id="2">3*5 = 15</Problem>
+				<Problem id="3">36/6 = 6</Problem>
+				<Problem id="4">8+9 = 16</Problem>
+				<Problem id="5">20-10+4 = 14</Problem>
+			</Exam>
+		</Student>
+
+		<Student ID="10010">
+			<Exam Id="1">
+				<Problem id="1">11+6 = 17</Problem>
+				<Problem id="2">14-3 = 11</Problem>
+				<Problem id="3">8*3 = 24</Problem>
+				<Problem id="4">32/8 = 4</Problem>
+				<Problem id="5">9+8-4 = 13</Problem>
+			</Exam>
+			<Exam Id="2">
+				<Problem id="1">6+12 = 18</Problem>
+				<Problem id="2">27/3 = 9</Problem>
+				<Problem id="3">20-9 = 10</Problem>
+				<Problem id="4">7*7 = 49</Problem>
+				<Problem id="5">15-2+5 = 18</Problem>
+			</Exam>
+			<Exam Id="3">
+				<Problem id="1">18-8 = 10</Problem>
+				<Problem id="2">5*4 = 20</Problem>
+				<Problem id="3">14/7 = 2</Problem>
+				<Problem id="4">9+9 = 19</Problem>
+				<Problem id="5">12+3-6 = 9</Problem>
+			</Exam>
+			<Exam Id="4">
+				<Problem id="1">7+4 = 11</Problem>
+				<Problem id="2">22-6 = 16</Problem>
+				<Problem id="3">9*3 = 27</Problem>
+				<Problem id="4">45/5 = 9</Problem>
+				<Problem id="5">8+10/2 = 12</Problem>
+			</Exam>
+			<Exam Id="5">
+				<Problem id="1">16+5 = 21</Problem>
+				<Problem id="2">30-13 = 17</Problem>
+				<Problem id="3">6*8 = 48</Problem>
+				<Problem id="4">40/10 = 4</Problem>
+				<Problem id="5">9+7-20 = -4</Problem>
+			</Exam>
+		</Student>
+
 	</Students>
 </Teacher>

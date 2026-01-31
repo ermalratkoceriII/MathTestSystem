@@ -23,7 +23,6 @@
         /// <summary>
         /// The score percentage of the student.
         /// </summary>
-        public double ScorePercentage =>
-            TotalProblems == 0 ? 0 : (double)CorrectProblems / TotalProblems * 100;
+        public double ScorePercentage => TotalProblems == 0 ? 0 : (double)CorrectProblems / TotalProblems * 100;
     }
 }
