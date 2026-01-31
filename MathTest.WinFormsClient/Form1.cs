@@ -219,8 +219,13 @@ public partial class Form1 : Form
             e.Cancel = true;
 
             var key = PromptForKey();
-            if (key == null)
+            
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                MessageBox.Show("Key is required.", "Access denied",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+            }
 
             if (key == _teacherAccessKey)
             {
