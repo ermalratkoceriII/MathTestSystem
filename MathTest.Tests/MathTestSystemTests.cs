@@ -13,7 +13,7 @@ namespace MathTest.Tests
                   <Students>
                     <Student ID="12345">
                       <Exam Id="1">
-                        <Task id="1">2+3/6-4 = 74</Task>
+                        <Problem id="1">2+3/6-4 = 74</Problem>
                       </Exam>
                     </Student>
                   </Students>

@@ -1,9 +1,13 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="MathTest.Api/MathTest.Api.csproj" Id="5d220850-1cca-42a0-b72c-891cd9e7d14b" />
   <Project Path="MathTest.Application/MathTest.Application.csproj" Id="1f128437-879b-4261-8432-55e305a273ab" />
   <Project Path="MathTest.Domain/MathTest.Domain.csproj" Id="dcb89336-ce6a-4e4b-b42c-0a8b2fe685be" />
   <Project Path="MathTest.Engine/MathTest.Engine.csproj" Id="b00b6376-aaf9-48c1-bcc0-7a55ececb8bd" />
   <Project Path="MathTest.Infrastructure/MathTest.Infrastructure.csproj" Id="2b06ab2e-035f-4674-a91a-17d7708da7e6" />
+  <Project Path="MathTest.Sandbox/MathTest.Sandbox.csproj" Id="7fea24ea-9ba2-46a0-b220-23ea6f108ae8" />
   <Project Path="MathTest.Tests/MathTest.Tests.csproj" Id="5b150b67-b36c-42eb-a751-7027cc38f4ed" />
   <Project Path="MathTest.WpfClient/MathTest.WpfClient.csproj" Id="3120caf8-eb67-484e-96cb-e75367d698d9" />
 </Solution>
