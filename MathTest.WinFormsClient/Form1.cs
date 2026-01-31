@@ -1,4 +1,5 @@
-﻿using MathTest.WinFormsClient.Models;
+﻿using MathTest.Domain.Entities;
+using MathTest.WinFormsClient.Models;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
@@ -68,6 +69,7 @@ public partial class Form1 : Form
                 throw new Exception("Could not deserialize server response.");
 
             BindTeacher(_lastTeacher);
+            BindStudentView(_lastTeacher);
 
             lblStatus.Text = "Status: Uploaded & graded ✅";
         }
@@ -136,5 +138,63 @@ public partial class Form1 : Form
             : (double)correct / total * 100;
 
         lblSummary.Text = $"Student: {student.Id} | Exam: {exam.Id} | Score: {correct}/{total} | ({percentage:0}%)";
+    }
+
+    private void BindStudentView(TeacherDto teacher)
+    {
+        cmbStudentId.DataSource = null;
+        cmbStudentId.DisplayMember = "Id";
+        cmbStudentId.DataSource = teacher.Students;
+
+        cmbStudentId.SelectedIndexChanged += (_, _) => OnStudentViewStudentSelected();
+        cmbStudentExam.SelectedIndexChanged += (_, _) => OnStudentViewExamSelected();
+
+        if (teacher.Students.Count > 0)
+            cmbStudentId.SelectedIndex = 0;
+    }
+
+    private void OnStudentViewStudentSelected()
+    {
+        if (cmbStudentId.SelectedItem is not StudentDto student)
+            return;
+
+        cmbStudentExam.DataSource = null;
+        cmbStudentExam.DisplayMember = "Id";
+        cmbStudentExam.DataSource = student.Exams;
+
+        if (student.Exams.Count > 0)
+            cmbStudentExam.SelectedIndex = 0;
+
+        UpdateStudentSummary(student, cmbStudentExam.SelectedItem as ExamDto);
+    }
+
+    private void OnStudentViewExamSelected()
+    {
+        if (cmbStudentId.SelectedItem is not StudentDto student)
+            return;
+
+        if (cmbStudentExam.SelectedItem is not ExamDto exam)
+            return;
+
+        gridStudentProblems.DataSource = null;
+        gridStudentProblems.DataSource = exam.Problems;
+
+        UpdateStudentSummary(student, exam);
+    }
+
+    private void UpdateStudentSummary(StudentDto student, ExamDto? exam)
+    {
+        if (exam == null)
+        {
+            lblStudentSummary.Text = $"Student: {student.Id}";
+            return;
+        }
+
+        var total = exam.Problems.Count;
+        var correct = exam.Problems.Count(p => p.IsCorrect);
+        var percentage = total == 0 ? 0 : (double)correct / total * 100;
+
+        lblStudentSummary.Text =
+            $"Student: {student.Id} | Exam: {exam.Id} | Score: {correct}/{total} ({percentage:0}%)";
     }
 }
