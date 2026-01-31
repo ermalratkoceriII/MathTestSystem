@@ -33,7 +33,7 @@ A .NET-based system for automatically checking student arithmetic exams provided
 - Authentication is out of scope
 
 ## How to Run
-# NOTE: The teacher must insert the data first for the students to be able to see them
+### NOTE: The teacher must insert the data first for the students to be able to see them
 1. Startup config must be set to run these projects: `MathTest.Api` and `MathTest.WinFormsClient`. Afterwards run the project.
 2. Open `/swagger` or the WinForm window that pops up
 4. Select the teachers tab and insert the password (its in the appsettings.json for dev environment)
