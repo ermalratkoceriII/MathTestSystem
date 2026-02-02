@@ -229,6 +229,7 @@ public partial class Form1 : Form
             if (key == _teacherAccessKey)
             {
                 _isTeacherUnlocked = true;
+                e.Cancel = false;
                 tabMain.SelectedTab = tabTeacher;
             }
             else
