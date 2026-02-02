@@ -236,8 +236,7 @@ public partial class Form1 : Form
             {
                 MessageBox.Show("Invalid key.", "Access denied",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                tabMain.SelectedTab = tabStudent;
+                return;
             }
         }
     }
